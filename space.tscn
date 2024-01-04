@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwm7ptlg2tq6j"]
+
+[ext_resource type="PackedScene" uid="uid://dfew7a6fgenxs" path="res://model/Tochimaru.glb" id="1_x78qi"]
+[ext_resource type="Script" uid="uid://djfsmrw64jqcb" path="res://script/rotation.gd" id="2_bh4jv"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="Tochimaru2" parent="." instance=ExtResource("1_x78qi")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+script = ExtResource("2_bh4jv")
